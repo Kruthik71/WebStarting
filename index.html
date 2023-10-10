@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started . . . .!</title>
+    <style>
+        .child{
+            margin-left: 20px;
+        }
+        h2{
+            text-align: center;
+            text-decoration: line-through;
+        }
+        ul{
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            margin-right: 20px;
+            background-color: rgb(117, 212, 144);
+            border: 1px solid rgb(123, 87, 118);
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+        }
+        .heading ul li a{
+            text-decoration: none;
+        }
+        .heading ul li a:visited{
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="heading">
+        <ul>
+            <li><a href="https://drive.google.com/file/d/1FpPjfXeGTjbTWNxoASvjKdbN6PTDLjb3/view?usp=drive_link">HTML,CSS Material</a></li>
+            <li><a href="https://drive.google.com/file/d/1_PmR2v5g4kQCJIzJ0UVby3KXMOLefOsn/view?usp=drive_link">JS Material</a></li>
+            <li><a href="https://drive.google.com/file/d/1iOoaBZEE9MHt4Hh88onXGfPMNAyvcuCl/view?usp=sharing">React Material</a></li>
+            <li><a href="#js">JavaScript</a></li>
+            <li><a href="#htmlcss">Html and Css</a></li>
+            <li><a href="#react">React</a></li>
+        </ul>
+    </header>
+    <hr>
+    <div class="general">
+        <h2><i>General things related to Web Development</i></h2>
+        <p>1) Content is redered on to a page using rendering engine.</p>
+        <p>2) XML is a data-structure that can be stored and sent across server</p>
+        <p>3) PNG support lossless compression whereas JPEG,GIF support lossy compression</p>
+        <p>4) Node.js is a cross platform JS runtime enviornment.</p>
+        <p>5) meta tag has attribute called http-equiv which can be set to refresh (which reloads page using plain Vanilla HTML)</p>
+
+    </div>
+    <hr>
+    <div class="javscript" id="js">
+        <h2><i>JavaScript</i></h2>
+        <p>1) Developed by netscape then acquired by ECMA to make it standardized.</p>
+        <p>2) ECMA has GDPR(General Data Protection Regulation) a committe which oversees the protection of data of users.</p>
+        <p>3) Only variant type is available in javascript which is used as (var).</p>
+        <p>4) In JS the keywords are case-sensitive.</p>
+        <p>5) Method Overloading can be done in JS greeting(),greeting(101),greeting(101,"Kruthik") like this and can have respective functions.</p>
+        <div class="child">
+            <p>5.1) <strong>function</strong> greeting() -> here function is a reserved keyword</p>
+            <p>5.2) <strong>var greeting=function(){ . . . }</strong> -> is called anonymous function</p>
+            <p>5.3) <strong>( function() { . . . . }) ();</strong> -> is a IIFE stands for Immediaely invoked function expression which can be used only once in a running script, Example. (Cookies,Notification sending,Greeting to a wesite)</p>
+            <p>5.4) <strong>arguments.length()</strong> is a method through which we can see no. of arguments passed into a function or a constructor. Both are reserve words here.</p>
+            <p>5.5) <strong>length()</strong> -> property in JS is read-write which means we can write into it and then read from it. Basically it is prone to changable values.</p>
+        </div>
+        <p>6) Control flow statements (if,else,for,while) are inherited from C language and can be used.</p>
+        <p>7) Operators are (<strong>!,&lt,>,&lt=,>=,==,!=,=</strong> (assignment operator and it can be short-handed with other operators))</p>
+        <p>8) There is no support for 2D or 3D Arrays in JS, it can be done through the creation of Array of Arrays.</p>
+        <pre><strong>
+            var temp=new Array();
+            temp[0]=new Array();
+            temp[0][0]=value;
+        </strong></pre>
+        <p>9) There are 6 Core Objects in JS namely : <strong>Array,Date,Math,String,Object,Regex</strong></p>
+        <p>10) Except <strong>Math</strong> every other Object should be invoked using <strong>new keyword</strong> in JS because Math is a static function which is predefined and can be called by simple saying <strong>Math.method</strong></p>
+        <pre><strong>
+            alert(Math.PI) //Simply done like this
+            var arr=new Array();
+            var str=new String();
+            etc . . .
+        </strong></pre>
+        <p>11) Array Object Demo -> <a href="./JavaScript/ArrayDemo.htm">Array Object</a></p>
+        <p>12) Date Object Demo -> <a href="./JavaScript/DateDemo.htm">Date Object</a></p>
+        <p>13) Math Object Demo -> <a href="./JavaScript/MathDemo.htm">Math Object</a></p>
+        <p>14) String Object Demo -> <a href="./JavaScript/StringDemo.htm">String Object</a></p>
+        <p>15) Object Demo -> <a href="./JavaScript/CreateObject-Direct.htm">Object</a></p>
+        <div class="child"><p>15.1) Usually Template way of creating a object is encouraged in JS for better understanding.</p>
+        <pre><strong>
+            function employee(empid,empname,dept)
+            {
+                this.empid = empid
+                this.empname = empname
+                this.dept = dept
+            }
+            function makeObject()
+            {
+                manager = new employee('E101','Lakshman','Tech');
+                executive = new employee('E110','James','Pre-Sales');
+                alert("2 objects created");
+            }
+        </strong></pre>
+        </div>
+        <p>16) Regular Expression Demo -> <a href="./JavaScript/RegExp-Example01.htm">Regex Object</a></p>
+        <p>17) Prototype in JS</p>
+        <div class="child">
+            <p>17.1) The Prototype Object is used to add a custom property to an object that is reflected on all instances of it</p>
+            <p>17.2) The keyword <strong>prototype</strong>is references before adding custom property to it.</p>
+            <p>17.3) The added property is attached to all instances of object added after prototype object is added or used.</p>
+            <p>17.4) Prototype can be used on pre-built JavaScript objects created with the <strong>new</strong> keyword.</p>
+            <p>17.5) Prototype Object Demo -> <a href="./JavaScript/Prototype03.htm">Prototype Object</a></p>
+        </div>
+        <p>18) Closure in JS</p>
+        <div class="child">
+            <p>18.1) The Clousre Object works with Outer and Inner variables of Objects.</p>
+            <p>18.2) Closure is the ability of the function to remeber the context in which it was defined.</p>
+            <p>18.3) Closure Object Demo -> <a href="./JavaScript/Closure03.htm">Closure Object</a></p>
+        </div>
+        <p>19) Browser Object Model and Document Object Model</p>
+        <div class="child">
+            <img src="./Images/BOD-DOM.png" alt="BOM Image" width="400px">
+            <p>19.1) Here if we see the above image is a Heirarchial structure represnted as a Tree.</p>
+            <p>19.2) Trees in Context of data structures has levels to it.</p>
+            <p>19.3) The Window Object is at Level-0 whereas links,image,forms are at Level-2</p>
+            <p>19.4) So, the BOM is called Level-0 DOM and Document & their children are referred as DOM at Level-2</p>
+            <p>19.5) Window object is the parent to all objects.</p>
+        </div>
+        <p>19.a) <strong>Window</strong> Object provided by the browser itself.</p>
+        <div class="child">
+            <p>19.a.1) Represents the browser window itself.</p>
+            <p>19.a.2) It has load and unload events, open() and close() methods</p>
+            <p>19.a.3) It has properties such as innerHeight,innerWidth,status to manipulate and change the window size an state.</p>
+            <p>19.a.4) Window Object Demo -> <a href="./JavaScript/BOM.html">Window Object</a></p>
+        </div>
+        <p>19.b) <strong>Location</strong> Object</p>
+        <div class="child">
+            <p>19.b.1) Contains information about the current URL.</p>
+            <p>19.b.2) It has a reload() method</p>
+            <p>19.b.3) It has properties such as href,hash,port,protocol,hostname that can be accessed.</p>
+            <p>19.b.4) Location Object Demo -> <a href="./JavaScript/Location.htm">Location Object</a></p>
+        </div>
+        <p>19.c) <strong>Navigator</strong> Object</p>
+        <div class="child">
+            <p>19.c.1) Contains information about the browser.</p>
+            <p>19.c.2) It has a javaEnabled() method</p>
+            <p>19.c.3) It has properties such as appName,appVersion,userAgent that can be accessed.</p>
+            <p>19.c.4) Navigator Object Demo -> <a href="./JavaScript/Navigator.htm">Navigator Object</a></p>
+        </div>
+        <p>19.d) <strong>History</strong> Object</p>
+        <div class="child">
+            <p>19.d.1) Contains URL's visited by the user (Read only properties and Methods).</p>
+            <p>19.d.2) It has back(),forward(),go() methods</p>
+            <p>19.d.3) It has a length property that can be accessed.</p>
+        </div>
+        <p>19.e) <strong>Document</strong> Object</p>
+        <div class="child">
+            <p>19.e.1) Represents the HTML document loaded into the browser.</p>
+            <p>19.e.2) It has open(),close(),write() methods</p>
+            <p>19.e.3) It has properties such as lastModified,doctype that can be accessed.</p>
+            <p>19.e.4) Document Object Demo -> <a href="./JavaScript/BOM.html">Document Object</a></p>
+        </div>
+        <p>19.f) <strong>Image</strong> Object -> represeting an embedded image and has properties (src,alt).</p>
+        <p>19.g) <strong>Link</strong> Object -> represents HTML hyperlink has properties (href,target), where target can have following values (_blank,_self(default),_parent)</p>
+        <p>19.h) Document inturn has elements to it whose properties we can manipulate in the following way</p>
+        <div class="child">
+            <p>19.h.1) DOM Level-2 demo -> <a href="./JavaScript/DOM.html">DOM Level-2</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="html_css" id="htmlcss">
+        <h2><i>HTML and CSS</i></h2>
+        <p>1) HTML is Hyper-linked text markup language</p>
+        <p>2) SVG is Scalable vector graphics</p>
+        <p>3) Form has following attributes,</p>
+        <div class="child">
+            <p>3.1) <strong>method</strong> ->on how to send data to a server </p>
+            <p>3.2) <strong>name</strong> ->sever name is specified here</p>
+            <p>3.3) <strong>action</strong> -> server details are here</p>
+        </div>
+    </div>
+    <hr>
+    <div class="react" id="react">
+        <h2><i>React (Front-end)</i></h2>
+    </div>
+    <hr>
+    <div class="full-forms">
+        <h2><i>Full Forms</i></h2>
+        <p>1) HTML (Hyper-linked Markup Language)</p>
+        <p>2) CSS (Cascading Style Sheets)</p>
+        <p>3) SPA (Single Sage Applications)</p>
+        <p>4) RSS (Rich Site Summary)</p>
+        <p></p>
+    </div>
+    <hr>
+    <footer style="text-align: center;">
+        <p>&COPY KRUTHIK B 2023</p>
+    </footer>
+</body>
+</html>

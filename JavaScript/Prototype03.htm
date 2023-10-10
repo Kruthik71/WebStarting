@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>
+Prototype Object Demo
+</title>
+<script language="JavaScript">
+function Vehicle(hasEngine, hasWheels) {
+  this.hasEngine = hasEngine || false;
+  this.hasWheels = hasWheels || false;
+}
+
+function Car(make, model, hp) {
+   this.hp = hp;
+   this.make = make;
+   this.model = model;
+}
+
+function dispSpecs() {
+  alert(this.make + ", " + this.model + ", " + this.hp + ", " + this.hasEngine + ", " + this.hasWheels);
+}
+
+function proto() {
+Car.prototype = new Vehicle(true, true);
+Car.prototype.showSpecs = dispSpecs;
+
+var myPhantom = new Car("Rolls Royce", "Phantom",600);
+myPhantom.showSpecs();
+Vehicle.prototype.hasTrunk = true;
+alert(myPhantom.hasTrunk);
+}
+</script>
+</head>
+<body>
+<h2>Prototype Example</h2>
+<form>
+<input type="button" value="Prototype Inheritance" onclick="proto()"/>
+</form>
+<p>1) JS uses <strong>Prototypal-inheritence</strong> instead of classic inheritence</p>
+<p>2) Here an Object inherits another Object</p>
+<p><pre>
+  <strong>Car.prototype = new Vehicle(true, true); (As shown in the above example)</strong></pre></p>
+<p>3) Here in JS it does not support <strong>Multiple</strong> but it does supprt<strong> Multilevel Inheritence</strong></p>
+<p><strong>See the code below to understand the output after you click the above button, </strong></p>
+<hr>
+<code><pre><strong>
+function Vehicle(hasEngine, hasWheels) {
+  this.hasEngine = hasEngine || false;
+  this.hasWheels = hasWheels || false;
+}
+
+function Car(make, model, hp) {
+    this.hp = hp;
+    this.make = make;
+    this.model = model;
+}
+
+function dispSpecs() {
+  alert(this.make + ", " + this.model + ", " + this.hp + ", " + this.hasEngine + ", " + this.hasWheels);
+}
+
+function proto() {
+  Car.prototype = new Vehicle(true, true);
+  Car.prototype.showSpecs = dispSpecs;
+
+  var myPhantom = new Car("Rolls Royce", "Phantom",600);
+  myPhantom.showSpecs();
+  Vehicle.prototype.hasTrunk = true;
+  alert(myPhantom.hasTrunk);
+}
+</strong></pre></code>
+<hr>
+</body>
+</html>

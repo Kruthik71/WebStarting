@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Array Object Demo</title>
+    <script type="text/javascript">
+        function myArray() {
+            var tmpArray = new Array();
+            tmpArray[0] = "H";
+            tmpArray[1] = "E";
+            tmpArray[2] = "L";
+            tmpArray[3] = "L";
+            tmpArray[4] = "O";
+
+      alert("This array contains " + tmpArray.length + " elements!");
+	  
+	  // Read-Write
+	  tmpArray.length = 3;
+	  alert("This array contains " + tmpArray.length + " elements!");
+	  
+      alert("The array elements are "+ tmpArray.toString());
+      alert("The array elements in reverse order are " + tmpArray.reverse());
+		alert(tmpArray.pop());
+		
+      alert(tmpArray.sort());
+    }
+		
+		// function dateDemo(){
+		// 	var dt = new Date();
+		// 	alert(dt.getDay());
+		// 	alert(dt.getFullYear());
+		// 	alert(dt.getHours() + ":" + dt.getMinutes() +  ":" + dt.getSeconds());
+		// 	alert(dt.toTimeString());
+		// 	alert(dt.toGMTString());
+		// 	alert(dt.toLocaleDateString());
+			
+		// var indDate = new Date();
+		// indDate.setFullYear(1947,7,15);
+		// alert(indDate.getDay());
+			
+		// }
+		// function stringDemo(){
+		// 	var myStr = new String("Hello World");
+		// 	alert(myStr.charAt(0));
+		// 	alert(myStr.indexOf("l"));
+		// 	alert(myStr.length);
+		// 	alert(myStr.charCodeAt(1));
+		// 	alert(myStr.substr(4,5));
+		// 	alert(myStr.toUpperCase());
+			
+		// 	myStr = "First, Second, Third";
+		// 	var myArr = myStr.split(",");
+		// 	for(var i=0; i<myArr.length; i++)
+		// 	{
+		// 		alert(myArr[i]);
+		// 	}
+		// }
+		
+    </script>
+</head>
+<body>
+  <form>
+     <input type="button" value="Array Demo" onclick="myArray()" />
+	 <p><strong>See the code below to understand the output after you click the above button, </strong></p>
+	 <hr>
+	 <code><pre><strong>
+function myArray() {
+		var tmpArray = new Array();
+		tmpArray[0] = "H";
+		tmpArray[1] = "E";
+		tmpArray[2] = "L";
+		tmpArray[3] = "L";
+		tmpArray[4] = "O";
+
+alert("This array contains " + tmpArray.length + " elements!");
+
+// Read-Write Property of length is shown here 
+tmpArray.length = 3;
+alert("This array contains " + tmpArray.length + " elements!");
+
+alert("The array elements are "+ tmpArray.toString());
+alert("The array elements in reverse order are " + tmpArray.reverse());
+	alert(tmpArray.pop());
+	
+alert(tmpArray.sort());
+}
+</strong></pre></code>
+<hr>
+  </form>
+</body>
+</html>

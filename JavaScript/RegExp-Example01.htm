@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Object Demo</title>
+    <script language="JavaScript">
+        function checkEmail(){
+            var re5digit=/^[a-zA-Z]+[@][a-zA-Z]+([.][a-zA-Z]{2,3})+$/ //regular expression defining a email ID
+            if (document.myform.myinput.value.search(re5digit)==-1) //if match failed
+            alert("Please enter a valid email ID inside form")
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <p>A simple Email Validation Using Regex</p>
+        <input type="text" name="myinput" size=15>
+        <input type="button" onClick="checkEmail()" value="Validate">
+    </form>
+	 <p><strong>See the code below to understand the output after you click the above button, </strong></p>
+    <hr>
+    <code><pre><strong>
+function checkEmail(){
+    var re5digit=/^[a-zA-Z]+[@][a-zA-Z]+([.][a-zA-Z]{2,3})+$/ //regular expression defining a email ID
+    if (document.myform.myinput.value.search(re5digit)==-1) //if match failed
+    alert("Please enter a valid email ID inside form")
+}
+    </strong></pre></code>
+    <hr>
+    <p>1) In the same way we can do many more things using Regex, for more information <a href="https://www.programiz.com/javascript/regex">Click Here</a></p>
+    <p>2) Some MetaCharecters to create a pattern for regex are</p>
+    <img src="../Images/Regex.jpg" alt="RegexMeta" width="700px">
+    <p>3) The Pattern should be enclosed in <strong>/pattern/</strong> this way.</p>
+    <p>4) The pattern <strong>/pattern/gi</strong> here <strong>g</strong> refers to global scope and <strong>i</strong> referes to case-insensitive search.</p>
+    <p>5) There are some associated methods as well in Regex as well,</p>
+    <img src="../Images/RegexMethods.png" alt="RegexMethods" width="700px">
+</body>
+</html>

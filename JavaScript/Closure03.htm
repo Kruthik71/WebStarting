@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Closure Object Demo</title>
+<script>
+var getVal,incrementVal,setVal;
+function numbers() {
+    var num = 419;
+    getVal = function() { alert(num);}
+    incrementVal = function() {num++;}
+    setVal = function(tmpNum) { num = tmpNum;}
+}
+function closureEx(){
+    var getNum = numbers();
+    getVal();
+    incrementVal();
+    getVal();
+    setVal(100);
+    getVal();
+}
+</script>
+</head>
+<body>
+    <input type="button" value="Closure Object Demo" onclick="closureEx()" />
+	 <p><strong>See the code below to understand the output after you click the above button, </strong></p>
+  <hr>
+  <code><pre><strong>
+function numbers() {
+  var num = 419;
+  getVal = function() { alert(num);}
+  incrementVal = function() {num++;}
+  setVal = function(tmpNum) { num = tmpNum;}
+}
+function closureEx(){
+var getNum = numbers();
+  getVal();
+  incrementVal();
+  getVal();
+  setVal(100);
+  getVal();
+}
+  </strong></pre></code>
+  <hr>
+</body>
+</html>

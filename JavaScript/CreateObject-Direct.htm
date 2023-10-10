@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Object Demo</title>
+<style>
+	p{
+		display: inline-block;
+	}
+</style>
+<Script language="JavaScript">
+var manager, executive;
+
+function makeObject()
+{
+	// Create the first object
+	manager = new Object();
+	manager.empid = "E101";
+	manager.empname = "Lakshman";
+	manager.dept = "Tech";
+	
+	// Create the second object
+	executive = new Object();
+	executive.empid = "E110";
+	executive.empname = "James";
+	executive.dept = "Pre-Sales";
+
+	alert("2 objects created");
+}
+
+function getData()
+{
+	alert("The manager's name is " + manager.empname);
+	alert("The executive's name is " + executive.empname);
+}
+
+/*
+// Or the object can be created this way using (TEMPLATE FUNCTION)
+function employee(empid,empname,dept)
+{
+	this.empid = empid
+	this.empname = empname
+	this.dept = dept
+}
+function makeObject()
+{
+	manager = new employee('E101','Lakshman','Tech');
+	executive = new employee('E110','James','Pre-Sales');
+	alert("2 objects created");
+}
+function getData()
+{
+	alert("The manager's name is " + manager.empname);
+	alert("The executive's name is " + executive.empname);
+}
+*/
+</Script>
+</head>
+<body>
+<form>
+<p><input type="button" value="CreateObjects" onclick="makeObject()"></p>
+<p><input type="button" value="GetNames" onclick="getData()"></p> <br>
+<p><strong>See the code below to understand the output after you click the above button, </strong></p>
+<hr>
+<code><pre><strong>
+var manager, executive;
+
+function makeObject()
+{
+	// Create the first object
+	manager = new Object();
+	manager.empid = "E101";
+	manager.empname = "Lakshman";
+	manager.dept = "Tech";
+	
+	// Create the second object
+	executive = new Object();
+	executive.empid = "E110";
+	executive.empname = "James";
+	executive.dept = "Pre-Sales";
+
+	alert("2 objects created");
+}
+
+function getData()
+{
+	alert("The manager's name is " + manager.empname);
+	alert("The executive's name is " + executive.empname);
+}
+
+/*
+// Or the object can be created this way using (TEMPLATE FUNCTION)
+function employee(empid,empname,dept)
+{
+	this.empid = empid
+	this.empname = empname
+	this.dept = dept
+}
+function makeObject()
+{
+	manager = new employee('E101','Lakshman','Tech');
+	executive = new employee('E110','James','Pre-Sales');
+	alert("2 objects created");
+}
+function getData()
+{
+	alert("The manager's name is " + manager.empname);
+	alert("The executive's name is " + executive.empname);
+}
+*/
+</strong></pre></code>
+<hr>
+</form>
+</body>
+</html>

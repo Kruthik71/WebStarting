@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Date Object Demo</title>
+    <script language="javascript">
+        function dateDemo() {
+            var dt = new Date();
+            alert("The current date is " + dt.getDate());
+            alert("The day is " + dt.getDay());
+            alert("The full year is " + dt.getFullYear());
+            alert("The hour is " + dt.getHours());
+            alert("The minute is " + dt.getMinutes());
+            alert("The seconds is " + dt.getSeconds());
+            alert("The time is " + dt.toTimeString());
+            alert("The GMT value is " + dt.toGMTString());
+            alert("The locale date is " + dt.toLocaleDateString());
+            var indDate = new Date();
+            indDate.setFullYear(1947,7,15);
+            alert(indDate.getDay());
+        };
+    </script>
+    <style>
+        .child{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Date Demo" onclick="dateDemo()" />
+    <p>1) Few things to remeber</p>
+    <div class="child">
+        <p>1.1) Month is specified in (0-11) numerics when setFullYear() function is used which accepts 3 parameters.</p>
+    </div>
+    <p>2) We can add functions to Date Object itself and make Use of them using <strong>Prototype Keyword</strong>.</p>
+    <pre><strong>
+        // Prototyping by extending it for Date Object
+        Date.prototype.getDayNameNotaInbuiltFucntion=function(){
+            var days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+            return days[this.getDay()];
+        }
+        var dt=new Date();
+        dt.setFullYear(2001,2,4);
+        alert(dt.getDayNameNotaInbuiltFucntion());
+    </strong></pre>
+	<p><strong>See the code below to understand the output after you click the above button, </strong></p>
+    <hr>
+    <code><pre><strong>
+function dateDemo() {
+    var dt = new Date();
+    alert("The current date is " + dt.getDate());
+    alert("The day is " + dt.getDay());
+    alert("The full year is " + dt.getFullYear());
+    alert("The hour is " + dt.getHours());
+    alert("The minute is " + dt.getMinutes());
+    alert("The seconds is " + dt.getSeconds());
+    alert("The time is " + dt.toTimeString());
+    alert("The GMT value is " + dt.toGMTString());
+    alert("The locale date is " + dt.toLocaleDateString());
+    var indDate = new Date();
+    indDate.setFullYear(1947,7,15);
+    alert(indDate.getDay());
+};
+    </strong></pre></code>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window and Document Object</title>
+    <script>
+        var win,timer,docs;
+        function delayedW(){
+            timer=window.setTimeout(openW,5000);
+        }
+        function openW(){
+            win=window.open("https://www.w3schools.com/js/js_htmldom_methods.asp","","left=250,top=250,width=500,height=500");
+        }
+        function closeW(){
+            win.close();
+        }
+        function closeCurW(){
+            self.close();
+        }
+        function docuementObj(){
+            docs=window.open("","","left=150,top=150,heigth=200,width=200")
+            document.links[0].href="https://cnotessprovidere.netlify.com";
+            docs.document.open();
+            docs.document.write("<h1>We can Write here . . .</h1>");
+            docs.document.write(docs.document.lastModified);
+            docs.document.close();
+        }
+    </script>
+    <style>
+        form{
+            text-align: center;
+        }
+        input{
+            margin:auto;
+            padding: 4px 4px;
+            margin: 4px;
+        }
+        h1{
+            text-decoration: line-through;
+        }
+        h2{
+            z-index: 1;
+        }
+        .cool{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <h1><i>Browser Object Model</h1>
+        <h2>Window and Document Object</h2>
+        <input type="button" value="Opening New Window" onclick="openW()" class="btn btn-primary"> <br>
+        <input type="button" value="Closing the window opened" onclick="closeW()"> <br>
+        <input type="button" value="Delaying the window opening" onclick="delayedW()"> <br>
+        <input type="button" value="Closing Current Window" onclick="closeCurW()"> <br>
+        <a href="http://duckduckgo.com">Search</a> <br>
+        <input type="button" value="Playing with doucment" onclick="docuementObj()">
+    </form>
+    <div class="cool">
+	 <p><strong>See the code below to understand the output after you click the above button, </strong></p>
+     <hr>
+    <code><pre><strong>
+var win,timer,docs;
+function delayedW(){
+    timer=window.setTimeout(openW,5000);
+}
+function openW(){
+    win=window.open("https://www.w3schools.com/js/js_htmldom_methods.asp","","left=250,top=250,width=500,height=500");
+}
+function closeW(){
+    win.close();
+}
+function closeCurW(){
+    self.close();
+}
+function docuementObj(){
+    docs=window.open("","","left=150,top=150,heigth=200,width=200")
+    document.links[0].href="https://cnotessprovidere.netlify.com";
+    docs.document.open();
+    docs.document.write("We can Write here . . .");
+    docs.document.write(docs.document.lastModified);
+    docs.document.close();
+}
+    </strong></pre></code>
+    <hr>
+</div>
+</body>
+</html>
